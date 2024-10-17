@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <footer className="footer">
-            <p>&copy; 2024 Mi Tienda. Todos los derechos reservados.</p>
+            <p>&copy; 2024 SOVAL Todos los derechos reservados.</p>
         </footer>
     );
 };

@@ -11,6 +11,7 @@ export const Inicio  = () => {
      <Link to="/productos">
      <h1>Productos</h1>
      </Link>
+     <h1>BIENVENIDOS A SOVAL</h1>
      <img src={Portada} alt="Inicio"/>
      <Footer>
       
