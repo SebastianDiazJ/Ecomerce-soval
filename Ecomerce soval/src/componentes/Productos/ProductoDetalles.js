@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 export const ProductoDetalles = () => {
     const value = useContext(DataContext);
     const [productos] = value.productos;
+    const addCarrito = value.addCarrito; // Obtenemos la función addCarrito del contexto
     const [detalle, setDetalle] = useState({});
     const [modalVisible, setModalVisible] = useState(false); // Para controlar la visibilidad del modal
     const params = useParams();
@@ -45,9 +46,13 @@ export const ProductoDetalles = () => {
                                 <h2>{detalle.title}</h2>
                                 <p className="price">${detalle.price}</p>
                                 <p><b>Descripción:</b> {detalle.description || "El calzado se refiere a cualquier tipo de accesorio o prenda diseñada para proteger y cubrir los pies. El calzado puede variar ampliamente en diseño, estilo, materiales y función, y es esencial para mantener la comodidad y la salud de los pies mientras se realizan diversas actividades."}</p>
+                                {/* Botón de Añadir al carrito */}
+                                <button className="btndetalle" onClick={() => addCarrito(detalle.id)}>
+                                    Añadir al carrito
+                                </button>
                             </div>
                         </div>
-
+                        
                         {/* Modal para mostrar la imagen grande */}
                         {modalVisible && (
                             <div className="modal" onClick={cerrarModal}>

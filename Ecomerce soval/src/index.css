@@ -17,106 +17,240 @@ code {
   width: 100%;
   min-height: 100vh;
   margin: 0 auto;
-  box-shadow: 0 5px 6px #08a05ca4 ;
+  box-shadow: 0 5px 6px #086da0a4 ;
   padding: 0 15px;
   box-sizing: border-box;
 }
 /* Footer.css */
 .footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #1d4e89; /* Azul oscuro para el fondo */
+  color: #fff; /* Texto blanco para contraste */
   text-align: center;
-  padding: 10px 0;
+  padding: 20px 0; /* Aumentar padding para más espacio */
   position: fixed;
   bottom: 0;
   width: 97%;
-  min-height: 50px;
-  
+  min-height: 60px; /* Un poco más alto para mejor apariencia */
   overflow: hidden;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil en la parte superior */
+  transition: background-color 0.3s ease; /* Transición suave al cambiar el color */
 }
 
+/* Links en el footer */
+.footer a {
+  color: #0889a0; /* Verde para los links */
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 1rem; /* Espaciado entre links */
+  transition: color 0.3s ease; /* Transición suave para el hover */
+}
+
+.footer a:hover {
+  color: #f0f4f8; /* Color claro en hover */
+}
+
+/* Estilo adicional para el texto */
+.footer p {
+  font-size: 0.9rem; /* Ajustar tamaño de texto */
+  margin: 0; /* Sin margen para evitar espacio extra */
+}
+
+/* Estilo para una posible sección de copyright */
+.footer .copyright {
+  font-size: 0.8rem; /* Tamaño más pequeño para el copyright */
+  margin-top: 10px; /* Margen superior para separación */
+  color: rgba(255, 255, 255, 0.7); /* Texto menos opaco */
+}
 
 /*--------------------------HEADER CSS------------------*/
-header{
+/* Header Contenedor */
+header {
+  position: fixed;
   width: 97%;
   min-height: 100px;
   max-width: 1530px;
   overflow: hidden;
   display: flex;
   justify-content: space-around;
-  align-self: space-around;
   align-items: center;
-  flex-wrap: wrap; /*---para que se acomede a pantallas pequeñas ---*/
-  position: fixed; /*--con esto queda fijo */
+  flex-wrap: wrap; 
   box-sizing: border-box;
   background-color: white;
-  box-shadow: 0 5px 10px #08a05c50;
-}    
-a{
-  color:black ;
-  text-decoration: none;
-  text-transform: uppercase;
-}       
-a:hover{
-   color :#08a05c;
+  box-shadow: 0 5px 10px rgba(8, 160, 92, 0.2); /* Sombra con un toque de verde */
+  padding: 0 1rem; /* Ajuste en padding para que no tape los laterales */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
 }
-li{
-  list-style: none;
-}
-header ul{
+
+/* Links del menú */
+header ul {
   display: flex;
   padding: 0;
   margin: 0;
 }
-header ul li{
+
+header ul li {
+  list-style: none;
   padding: 0 1rem;
 }
-header ul li a{
-  font-weight:bold ;
+
+header ul li a {
+  color: #1d4e89; /* Azul oscuro para los links */
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif; /* Fuente moderna y ligera */
+  letter-spacing: 0.05rem;
+  transition: color 0.3s ease;
 }
-header .cart{   /* carrito  */
+
+header ul li a:hover {
+  color: #08a08e; /* Verde en hover */
+}
+
+/* Estilos para el carrito */
+header .cart {
   position: relative;
   cursor: pointer;
 }
-header .cart box-icon{
+
+header .cart box-icon {
   width: 45px;
   height: 45px;
+  fill: #1d4e89; /* Azul para el ícono del carrito */
 }
-header .cart span{
+
+header .cart span {
   position: absolute;
-  top: -1rem;
-  right: -1.5rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius:50%;
+  top: -10px;
+  right: -10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  padding: 0rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 700;
-  background-color: red;
+  background-color: #e63946; /* Rojo suave para la burbuja */
 }
+
+/* Hover Header */
+header:hover {
+  background-color: #f0f4f8; /* Fondo más claro en hover */
+  box-shadow: 0 8px 20px rgba(8, 160, 92, 0.2); /* Sombra más fuerte en hover */
+}
+
+/* Mantener espacios y ajuste para pantallas más grandes */
+@media (min-width: 768px) {
+  header {
+    padding: 0 2rem; /* Espacio adicional en pantallas más grandes */
+  }
+}
+
 /*------------------INICIO --------------------*/
 .inicio{
   width: 100%;
+  
   margin: 0 auto;
   padding-top: 9rem;
+  color: #333333;
+  text-align: center;
+  padding-bottom: 1rem;
 }
-.inicio h1{
-  font-size: 2.5rem;
-  color: #08a05c;
-}
-.inicio img{
-  width: 100%;
+.inicio h1 {
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif; /* Fuente nueva, moderna y ligera */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem; /* Espaciado sutil */
+  margin-bottom: 2.5rem;
+  color: #1d4e89; /* Azul oscuro elegante */
+  animation: fadeInDown 1s ease-in-out forwards;
+  opacity: 0;
 }
 
+/* Estilo y animación para las imágenes */
+.inicio img {
+  width: 80%;
+  max-width: 400px;
+  border-radius: 2.5rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Sombra suave para destacar la imagen */
+  transform: translateY(40px);
+  opacity: 0;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  animation: fadeInUp 1s ease-in-out forwards 0.3s;
+}
+
+/* Hover en las imágenes */
+.inicio img:hover {
+  transform: scale(1.05); /* Ligero aumento de tamaño */
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3); /* Sombra un poco más pronunciada */
+}
+
+/* Botón interactivo */
+.inicio .boton {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #1d4e89; /* Botón azul oscuro */
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  animation: fadeInUp 1s ease-in-out forwards 0.6s;
+  opacity: 0;
+  text-decoration: none;
+}
+
+.inicio .boton:hover {
+  background-color: #3a78c5; /* Cambio de color en hover */
+  color: #ffffff;
+}
+
+/* Animaciones keyframes */
+@keyframes fadeInDown {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Ajustes de responsividad */
+@media (max-width: 768px) {
+  .inicio h1 {
+    font-size: 2.3rem;
+  }
+  .inicio img {
+    width: 90%;
+  }
+}
 /*------------------PRODUCTOS -----------------*/
 .title {
   font-size: 2rem; /* Corregido el punto decimal */
   padding: 10rem 0 0 0;
-  color: #08a05c;
+  font-family: 'Poppins', sans-serif; /* Fuente nueva, moderna y ligera */
+  text-align: center;
+  color: #1d4e89; /* Azul oscuro elegante */
+ 
 }
 
 .productos {
@@ -169,49 +303,85 @@ header .cart span{
   margin-bottom: 0.5rem;
 }
 
-.producto .buttom {
-  width: 100%;
-  height: 45px;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 1rem 3rem;
-  padding: 0,1rem;
-  margin: 1rem;
+/*botones*/
+.btndetalle {
+  background: linear-gradient(135deg, #4e54c8, #8f94fb); /* Degradado de naranja a rosa */
+  border: none;
+  border-radius: 25px; /* Bordes redondeados */
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Transición suave para efectos */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
 
+.btndetalle:hover {
+  background: linear-gradient(135deg, #bb121a, #bc0404); /* Invertir el degradado al hacer hover */
+  transform: translateY(-3px); /* Efecto de levantar el botón */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Sombra más profunda al hacer hover */
+}
+
+.btndetalle:active {
+  transform: translateY(1px); /* Efecto de presionar el botón */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Sombra más tenue al hacer clic */
 }
 
 .buttom .btn {
+  background: linear-gradient(135deg, #4e54c8, #8f94fb); /* Degradado de azul oscuro a azul claro */
   border: none;
-  outline: 0; /* para que no se genere borde negro*/
+  outline: 0; /* Elimina el borde negro al hacer clic */
   cursor: pointer;
-  border-radius: 5px;
-}
-
-.buttom button {
-  background-color: #3033d3;
-  max-width: 250px;
-  width: 100%;
-  font-size: 1.5rem;
+  border-radius: 30px; /* Bordes redondeados */
+  padding: 12px 24px; /* Tamaño del botón */
   color: white;
+  font-size: 1.5rem;
   font-weight: 600;
-
+  transition: all 0.3s ease; /* Transición suave para los efectos */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  width: 100%;
+  max-width: 250px;
 }
+
+.buttom .btn:hover {
+  background: linear-gradient(135deg, #8f94fb, #4e54c8); /* Invertir el degradado al hacer hover */
+  transform: translateY(-3px); /* Efecto de levantar el botón */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Sombra más profunda al hacer hover */
+}
+
+.buttom .btn:active {
+  transform: translateY(1px); /* Efecto de presionar el botón */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Sombra más tenue al hacer clic */
+}
+
 .buttom div {
-  background-color: #08a05c;
+  background-color: #08a05c; /* Color de fondo verde */
   display: grid;
   align-items: center;
   text-align: center;
   margin-left: -2rem;
-  border-radius: 5px;
+  border-radius: 10px; /* Bordes redondeados más suaves */
+  padding: 12px; /* Añadir padding interno para un mejor aspecto */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para el contenedor */
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
 }
+
+.buttom div:hover {
+  background-color: #06b977; /* Cambio de color en el contenedor al hacer hover */
+}
+
 .buttom div a {
   color: white;
   font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Transición suave para el color del enlace */
 }
 
 .buttom div a:hover {
-  color: white;
-} 
+  color: #e0e0e0; /* Cambiar el color a un tono más claro al hacer hover */
+}
 
 /*detalles */
 /* Contenedor principal de los detalles del producto */
@@ -283,9 +453,9 @@ header .cart span{
 
 /* Imagen dentro del modal */
 .modal-content {
-  margin: 15% auto;
+  margin: 10% auto;
   display: block;
-  width: 80%;
+  width: 40%;
   max-width: 700px;
 }
 
