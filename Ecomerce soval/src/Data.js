@@ -121,6 +121,16 @@ const data = {
       img2: ".jpg?auto=format,compress&q=90&updated_at=1609438911&w=1000",
       cantidad: 1
     },
+    {
+      id: 13,
+      title: "Soval explotion",
+      price: 3000,
+      image: require('./images/soval1.jpg'),
+      category: "blusas",
+      img1: "https://stockx-360.imgix.net/Nike-Air-Rubber-Dunk-Off-White-UNC/Images/Nike-Air-Rubber-Dunk-Off-White-UNC/Lv2/img",
+      img2: ".jpg?auto=format,compress&q=90&updated_at=1609438911&w=1000",
+      cantidad: 1
+    },
   ],
 };
 

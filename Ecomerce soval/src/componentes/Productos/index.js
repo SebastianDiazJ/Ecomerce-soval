@@ -25,7 +25,7 @@ export const ProductosLista = () =>{
           />
         ))
       }
-    <ProductoItem/>
+    
 
     </div>
     </>

@@ -1,6 +1,6 @@
 import React from "react";
 // Agregaremos estilos personalizados
-
+//se crea el boton 
 const FloatingButton = () => {
   const handleClick = () => {
     window.open('https://wa.me/3022122664', '_blank'); // número de WhatsApp
