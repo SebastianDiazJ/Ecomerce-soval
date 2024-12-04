@@ -704,6 +704,28 @@ header:hover {
   border-radius: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+/* Estilo para el boton de whasap */
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366; /* Color verde de WhatsApp */
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000; /* Asegura que esté siempre visible */
+}
+
+.floating-button img {
+  width: 35px;
+  height: 35px;
+}
+
 
 /* Responsividad: en pantallas más pequeñas, imagen y descripción en columna */
 @media (max-width: 768px) {

@@ -4,6 +4,7 @@ import 'boxicons';
 import { Paginas } from "./componentes/Paginas";
 import { DataProvider } from "./componentes/context/Dataprovider";
 import { Carrito } from "./componentes/Carrito";
+import FloatingButton from "./componentes/Whastapp/FloatingButton";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <Carrito/>
       <Paginas />
+      <FloatingButton />
     </div>
     </DataProvider>
   );
