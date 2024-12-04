@@ -3,7 +3,7 @@ import React from "react";
 //se crea el boton 
 const FloatingButton = () => {
   const handleClick = () => {
-    window.open('https://wa.me/3022122664', '_blank'); // número de WhatsApp
+    window.open('https://wa.me/3017104942', '_blank'); // número de WhatsApp
   };
 
   return (
