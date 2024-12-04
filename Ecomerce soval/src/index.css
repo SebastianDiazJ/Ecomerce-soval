@@ -105,6 +105,36 @@ header ul li a {
 header ul li a:hover {
   color: #08a08e; /* Verde en hover */
 }
+.logo {
+  display: flex;
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+  width: 100px; /* Tamaño del contenedor */
+  height: 100px;
+  margin: 10px auto; /* Centrado y espaciado */
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 50%; /* Hace el contenedor circular */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+  overflow: hidden; /* Recorta la imagen al borde del contenedor */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo img {
+  width: 100%; /* La imagen ocupa el 100% del contenedor */
+  height: 100%;
+  object-fit: cover; /* Hace que la imagen rellene el contenedor sin deformarse */
+  border-radius: 50%; /* Hace la imagen redonda */
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el cursor */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+a {
+  text-decoration: none; /* Elimina subrayado del enlace */
+}
+
 
 /* Estilos para el carrito */
 header .cart {
@@ -704,26 +734,53 @@ header:hover {
   border-radius: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-/* Estilo para el boton de whasap */
-.floating-button {
+                                              /* Estilo para el boton de whasap */
+/* Contenedor principal del botón flotante */
+.floating-button-container {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
-  background-color: #25d366; /* Color verde de WhatsApp */
-  border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  bottom: 20px; /* Posición desde la parte inferior */
+  right: 20px; /* Posición desde la parte derecha */
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaciado entre el ícono y el texto */
+  background-color: #25d366; /* Color de fondo del botón */
+  padding: 10px 15px; /* Espaciado interno */
+  border-radius: 30px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+  cursor: pointer;
+  z-index: 1000; /* Asegura que el botón esté sobre otros elementos */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Botón flotante con el ícono */
+.floating-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  z-index: 1000; /* Asegura que esté siempre visible */
+  width: 40px; /* Tamaño del ícono */
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  overflow: hidden; /* Recorta el contenido al borde circular */
 }
 
+/* Ícono de WhatsApp */
 .floating-button img {
-  width: 35px;
-  height: 35px;
+  width: 70%; /* Tamaño del ícono dentro del círculo */
+  height: auto;
+}
+
+/* Texto flotante */
+.floating-message {
+  color: white; /* Color del texto */
+  font-size: 14px; /* Tamaño del texto */
+  font-weight: bold; /* Texto en negrita */
+}
+
+/* Efecto al pasar el cursor */
+.floating-button-container:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
 }
 
 

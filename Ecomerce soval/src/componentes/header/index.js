@@ -1,5 +1,5 @@
 import React,{useContext} from 'react';
-import Nike from "../../images/Nike.jpg";
+import Nike from "../../images/Logo.jpg";
 import { Link } from "react-router-dom";
 import { DataContext} from "../../componentes/context/Dataprovider";
 export const Header = () => {
@@ -16,7 +16,7 @@ export const Header = () => {
     <header>
       <Link to="/">
         <div className="logo">
-          <img src={Nike} alt="logo" width="150"/>
+          <img src={Nike} alt="logo" width="100"/>
         </div>
       </Link>
       <ul>
