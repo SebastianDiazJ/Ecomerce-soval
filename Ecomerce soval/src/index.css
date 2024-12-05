@@ -22,18 +22,19 @@ code {
   box-sizing: border-box;
 }
 /* Footer.css */
+/* Footer general */
 .footer {
-  background-color: #1d4e89; /* Azul oscuro para el fondo */
-  color: #fff; /* Texto blanco para contraste */
+  background-color: #1d4e89; /* Azul oscuro */
+  color: #fff; /* Texto blanco */
   text-align: center;
-  padding: 20px 0; /* Aumentar padding para más espacio */
+  padding: 20px 0; /* Espaciado interno */
   position: fixed;
   bottom: 0;
-  width: 97%;
-  min-height: 60px; /* Un poco más alto para mejor apariencia */
-  overflow: hidden;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil en la parte superior */
-  transition: background-color 0.3s ease; /* Transición suave al cambiar el color */
+  left: 0; /* Asegura que el footer empiece desde el borde izquierdo */
+  width: 100%; /* Cubre todo el ancho de la pantalla */
+  min-height: 60px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
 
 /* Links en el footer */
@@ -41,25 +42,36 @@ code {
   color: #0889a0; /* Verde para los links */
   text-decoration: none;
   font-weight: bold;
-  margin: 0 1rem; /* Espaciado entre links */
-  transition: color 0.3s ease; /* Transición suave para el hover */
+  margin: 0 1rem; /* Espaciado entre los enlaces */
+  font-size: 1rem; /* Ajuste del tamaño de la fuente */
+  transition: color 0.3s ease;
 }
 
 .footer a:hover {
-  color: #f0f4f8; /* Color claro en hover */
+  color: #f0f4f8; /* Color claro al pasar el cursor */
 }
 
-/* Estilo adicional para el texto */
+/* Texto del footer */
 .footer p {
-  font-size: 0.9rem; /* Ajustar tamaño de texto */
-  margin: 0; /* Sin margen para evitar espacio extra */
+  font-size: 0.9rem;
+  margin: 0;
 }
 
-/* Estilo para una posible sección de copyright */
-.footer .copyright {
-  font-size: 0.8rem; /* Tamaño más pequeño para el copyright */
-  margin-top: 10px; /* Margen superior para separación */
-  color: rgba(255, 255, 255, 0.7); /* Texto menos opaco */
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px 10px; /* Reducir el espaciado */
+    font-size: 0.8rem; /* Texto más pequeño */
+  }
+
+  .footer a {
+    margin: 0 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .footer p {
+    font-size: 0.8rem;
+  }
 }
 
 /*--------------------------HEADER CSS------------------*/
@@ -201,7 +213,7 @@ header:hover {
 
 /* Estilo y animación para las imágenes */
 .inicio img {
-  width: 80%;
+  width: 100%;
   max-width: 400px;
   border-radius: 2.5rem;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Sombra suave para destacar la imagen */
@@ -734,53 +746,68 @@ header:hover {
   border-radius: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-                                              /* Estilo para el boton de whasap */
+                                 /*########################## Estilo para el boton de whasap ########################*/
+/* Contenedor principal del botón flotante */
 /* Contenedor principal del botón flotante */
 .floating-button-container {
   position: fixed;
-  bottom: 20px; /* Posición desde la parte inferior */
-  right: 20px; /* Posición desde la parte derecha */
+  bottom: 80px; /* Espacio para que no se monte sobre el footer */
+  right: 20px; /* Ajuste desde la parte derecha */
   display: flex;
   align-items: center;
-  gap: 10px; /* Espaciado entre el ícono y el texto */
-  background-color: #25d366; /* Color de fondo del botón */
-  padding: 10px 15px; /* Espaciado interno */
-  border-radius: 30px; /* Bordes redondeados */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+  gap: 10px;
+  background-color: #25d366;
+  padding: 10px 15px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
   cursor: pointer;
-  z-index: 1000; /* Asegura que el botón esté sobre otros elementos */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Botón flotante con el ícono */
+/* Botón circular */
 .floating-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px; /* Tamaño del ícono */
+  width: 40px;
   height: 40px;
   background-color: white;
   border-radius: 50%;
-  overflow: hidden; /* Recorta el contenido al borde circular */
+  overflow: hidden;
 }
 
-/* Ícono de WhatsApp */
 .floating-button img {
-  width: 70%; /* Tamaño del ícono dentro del círculo */
+  width: 70%;
   height: auto;
 }
 
-/* Texto flotante */
+/* Texto del botón */
 .floating-message {
-  color: white; /* Color del texto */
-  font-size: 14px; /* Tamaño del texto */
-  font-weight: bold; /* Texto en negrita */
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
 }
 
-/* Efecto al pasar el cursor */
+/* Efecto hover */
 .floating-button-container:hover {
-  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .floating-button-container {
+    bottom: 90px; /* Ajustar la posición para evitar montar el footer */
+    right: 10px; /* Ajustar margen derecho */
+    gap: 5px;
+    padding: 8px 10px;
+  }
+
+  .floating-message {
+    font-size: 12px;
+  }
 }
 
 
