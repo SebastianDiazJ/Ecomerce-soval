@@ -10,11 +10,20 @@ export const Carrito = () => {
     setMenu(false);
   };
 
-  // Calcula el total usando `priceUnit` o `priceWholesale` según la cantidad
+  // Calcula el total usando la lógica para docenas y unidades adicionales
   const calcularTotal = () => {
     return carrito.reduce((acc, item) => {
-      const price = item.cantidad >= 5 ? item.priceWholesale : item.priceUnit; // Si es mayorista
-      return acc + price * item.cantidad;
+      if (item.cantidad >= 12) {
+        const docenas = Math.floor(item.cantidad / 12); // Número de docenas completas
+        const unidadesSobrantes = item.cantidad % 12; // Unidades adicionales
+        return (
+          acc +
+          docenas * item.priceWholesale + // Precio por las docenas completas
+          unidadesSobrantes * item.priceUnit // Precio por las unidades adicionales
+        );
+      } else {
+        return acc + item.cantidad * item.priceUnit; // Si no alcanza la docena, cobra por unidad
+      }
     }, 0);
   };
 
@@ -52,13 +61,22 @@ export const Carrito = () => {
   const enviarCarritoWhatsApp = () => {
     const mensaje = carrito
       .map((item) => {
-        const price = item.cantidad >= 5 ? item.priceWholesale : item.priceUnit;
-        return `${item.cantidad}x ${item.title} - $${price}`;
+        if (item.cantidad >= 12) {
+          const docenas = Math.floor(item.cantidad / 12);
+          const unidadesSobrantes = item.cantidad % 12;
+          const precioDocenas = docenas * item.priceWholesale;
+          const precioUnidades = unidadesSobrantes * item.priceUnit;
+          return `${item.cantidad}x ${item.title} - ${docenas} docena(s) ($${precioDocenas}) + ${unidadesSobrantes} unidad(es) ($${precioUnidades})`;
+        } else {
+          const precio = item.cantidad * item.priceUnit;
+          return `${item.cantidad}x ${item.title} - $${precio}`;
+        }
       })
       .join("\n");
 
     const total = calcularTotal();
-    const url = `https://wa.me/?text=${encodeURIComponent(
+    const numeroWhatsApp = "3017104942"; // Número de WhatsApp
+    const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(
       `Pedido:\n${mensaje}\n\nTotal: $${total}`
     )}`;
 
@@ -94,8 +112,13 @@ export const Carrito = () => {
             <h2 style={{ textAlign: "center", fontSize: "3rem" }}>Carrito Vacio</h2>
           ) : (
             carrito.map((producto) => {
-              const price =
-                producto.cantidad >= 5 ? producto.priceWholesale : producto.priceUnit;
+              const docenas = Math.floor(producto.cantidad / 12);
+              const unidadesSobrantes = producto.cantidad % 12;
+              const precio =
+                producto.cantidad >= 12
+                  ? docenas * producto.priceWholesale +
+                    unidadesSobrantes * producto.priceUnit
+                  : producto.cantidad * producto.priceUnit;
 
               return (
                 <div className="carrito__item" key={producto.id}>
@@ -103,9 +126,9 @@ export const Carrito = () => {
                   <div>
                     <h3>{producto.title}</h3>
                     <p className="price">
-                      Precio actual: ${price}{" "}
+                      Precio actual: ${precio}{" "}
                       <span style={{ fontSize: "0.8rem" }}>
-                        ({producto.cantidad >= 12 ? "Mayorista" : "Unidad"}) 
+                        ({producto.cantidad >= 12 ? "Mayorista" : "Unidad"})
                       </span>
                     </p>
                   </div>
