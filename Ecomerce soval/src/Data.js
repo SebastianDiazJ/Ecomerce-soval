@@ -1,11 +1,10 @@
-const data = {
+const data = { 
   status: "success",
   items: [
     {
       id: 1,
       title: "Soval Ref.A48",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img01.jpg'),
       category: "blusas",
@@ -13,8 +12,7 @@ const data = {
     {
       id: 2,
       title: "Soval Ref.098",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img02.jpg'),
       category: "blusas",
@@ -22,8 +20,7 @@ const data = {
     {
       id: 3,
       title: "Soval Ref.095",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img03.jpg'),
       category: "blusas",
@@ -31,8 +28,7 @@ const data = {
     {
       id: 4,
       title: "Soval Ref.A66",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img04.jpg'),
       category: "blusas",
@@ -40,8 +36,7 @@ const data = {
     {
       id: 5,
       title: "Soval Ref.108",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img05.jpg'),
       category: "blusas",
@@ -49,8 +44,7 @@ const data = {
     {
       id: 6,
       title: "Soval Ref.A61",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img06.jpg'),
       category: "blusas",
@@ -58,8 +52,7 @@ const data = {
     {
       id: 7,
       title: "Soval Ref.109",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img07.jpg'),
       category: "blusas",
@@ -67,8 +60,7 @@ const data = {
     {
       id: 8,
       title: "Soval.Ref 113",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img020.jpg'),
       category: "blusas",
@@ -76,8 +68,7 @@ const data = {
     {
       id: 9,
       title: "Soval.Ref 136",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img021.jpg'),
       category: "blusas",
@@ -85,8 +76,7 @@ const data = {
     {
       id: 10,
       title: "Soval Ref.A56",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img022.jpg'),
       category: "blusas",
@@ -94,8 +84,7 @@ const data = {
     {
       id: 11,
       title: "Soval Ref.115",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img023.jpg'),
       category: "blusas",
@@ -103,8 +92,7 @@ const data = {
     {
       id: 12,
       title: "Soval Ref.093",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img024.jpg'),
       category: "blusas",
@@ -112,8 +100,7 @@ const data = {
     {
       id: 13,
       title: "Soval Ref.095",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img012.jpg'),
       category: "blusas",
@@ -121,8 +108,7 @@ const data = {
     {
       id: 14,
       title: "Soval Ref.141",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img013.jpg'),
       category: "blusas",
@@ -130,8 +116,7 @@ const data = {
     {
       id: 15,
       title: "Soval Ref.A54",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img014.jpg'),
       category: "blusas",
@@ -139,8 +124,7 @@ const data = {
     {
       id: 16,
       title: "Soval Ref.A57",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img015.jpg'),
       category: "blusas",
@@ -148,8 +132,7 @@ const data = {
     {
       id: 17,
       title: "Soval Ref.137",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img016.jpg'),
       category: "blusas",
@@ -157,8 +140,7 @@ const data = {
     {
       id: 18,
       title: "Soval Ref.105",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img017.jpg'),
       category: "blusas",
@@ -166,8 +148,7 @@ const data = {
     {
       id: 19,
       title: "Soval Ref.109",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img018.jpg'),
       category: "blusas",
@@ -175,8 +156,7 @@ const data = {
     {
       id: 20,
       title: "Soval Ref.140",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img019.jpg'),
       category: "blusas",
@@ -184,8 +164,7 @@ const data = {
     {
       id: 21,
       title: "Soval Ref.151",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img025.jpg'),
       category: "blusas",
@@ -193,8 +172,7 @@ const data = {
     {
       id: 22,
       title: "Soval Ref.139",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img026.jpg'),
       category: "blusas",
@@ -202,8 +180,7 @@ const data = {
     {
       id: 23,
       title: "Soval Ref.150",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img027.jpg'),
       category: "blusas",
@@ -211,8 +188,7 @@ const data = {
     {
       id: 24,
       title: "Soval Ref.028",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img028.jpg'),
       category: "blusas",
@@ -220,8 +196,7 @@ const data = {
     {
       id: 25,
       title: "Soval Ref.A58",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img029.jpg'),
       category: "blusas",
@@ -229,8 +204,7 @@ const data = {
     {
       id: 26,
       title: "Soval Ref.04",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img030.jpg'),
       category: "blusas",
@@ -238,8 +212,7 @@ const data = {
     {
       id: 27,
       title: "Soval Ref.142",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img031.jpg'),
       category: "blusas",
@@ -247,8 +220,7 @@ const data = {
     {
       id: 28,
       title: "Soval Ref.070",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img032.jpg'),
       category: "blusas",
@@ -256,8 +228,7 @@ const data = {
     {
       id: 29,
       title: "Soval Ref.097",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img033.jpg'),
       category: "blusas",
@@ -265,8 +236,7 @@ const data = {
     {
       id: 30,
       title: "Soval Ref.138",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img035.jpg'),
       category: "blusas",
@@ -274,8 +244,7 @@ const data = {
     {
       id: 31,
       title: "Soval Ref.A48",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img036.jpg'),
       category: "blusas",
@@ -283,8 +252,7 @@ const data = {
     {
       id: 32,
       title: "Soval Ref.108",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img037.jpg'),
       category: "blusas",
@@ -292,13 +260,11 @@ const data = {
     {
       id: 33,
       title: "Soval Ref.06",
-      priceUnit: 8500,
-      priceWholesale: 80000,
+      priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img038.jpg'),
       category: "blusas",
     },
-
   ],
 };
 

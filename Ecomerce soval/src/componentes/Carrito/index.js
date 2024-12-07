@@ -10,21 +10,9 @@ export const Carrito = () => {
     setMenu(false);
   };
 
-  // Calcula el total usando la lógica para docenas y unidades adicionales
+  // Calcula el total
   const calcularTotal = () => {
-    return carrito.reduce((acc, item) => {
-      if (item.cantidad >= 12) {
-        const docenas = Math.floor(item.cantidad / 12); // Número de docenas completas
-        const unidadesSobrantes = item.cantidad % 12; // Unidades adicionales
-        return (
-          acc +
-          docenas * item.priceWholesale + // Precio por las docenas completas
-          unidadesSobrantes * item.priceUnit // Precio por las unidades adicionales
-        );
-      } else {
-        return acc + item.cantidad * item.priceUnit; // Si no alcanza la docena, cobra por unidad
-      }
-    }, 0);
+    return carrito.reduce((acc, item) => acc + item.cantidad * item.priceUnit, 0);
   };
 
   // Resta unidades
@@ -60,18 +48,7 @@ export const Carrito = () => {
   // Envía el carrito a WhatsApp
   const enviarCarritoWhatsApp = () => {
     const mensaje = carrito
-      .map((item) => {
-        if (item.cantidad >= 12) {
-          const docenas = Math.floor(item.cantidad / 12);
-          const unidadesSobrantes = item.cantidad % 12;
-          const precioDocenas = docenas * item.priceWholesale;
-          const precioUnidades = unidadesSobrantes * item.priceUnit;
-          return `${item.cantidad}x ${item.title} - ${docenas} docena(s) ($${precioDocenas}) + ${unidadesSobrantes} unidad(es) ($${precioUnidades})`;
-        } else {
-          const precio = item.cantidad * item.priceUnit;
-          return `${item.cantidad}x ${item.title} - $${precio}`;
-        }
-      })
+      .map((item) => `${item.cantidad}x ${item.title} - $${item.cantidad * item.priceUnit}`)
       .join("\n");
 
     const total = calcularTotal();
@@ -112,25 +89,14 @@ export const Carrito = () => {
             <h2 style={{ textAlign: "center", fontSize: "3rem" }}>Carrito Vacio</h2>
           ) : (
             carrito.map((producto) => {
-              const docenas = Math.floor(producto.cantidad / 12);
-              const unidadesSobrantes = producto.cantidad % 12;
-              const precio =
-                producto.cantidad >= 12
-                  ? docenas * producto.priceWholesale +
-                    unidadesSobrantes * producto.priceUnit
-                  : producto.cantidad * producto.priceUnit;
+              const precio = producto.cantidad * producto.priceUnit;
 
               return (
                 <div className="carrito__item" key={producto.id}>
                   <img src={producto.image} alt="" />
                   <div>
                     <h3>{producto.title}</h3>
-                    <p className="price">
-                      Precio actual: ${precio}{" "}
-                      <span style={{ fontSize: "0.8rem" }}>
-                        ({producto.cantidad >= 12 ? "Mayorista" : "Unidad"})
-                      </span>
-                    </p>
+                    <p className="price">Precio actual: ${precio}</p>
                   </div>
                   <div>
                     <box-icon
