@@ -10,7 +10,7 @@ export const ProductosLista = () =>{
   console.log(productos)
   return (
     <>
-    <h1 className="title">PRODUCTOS</h1>
+    <h1 className="title">PRODUCTOS </h1>
     <div className="productos">
       {
         productos.map(productos =>(

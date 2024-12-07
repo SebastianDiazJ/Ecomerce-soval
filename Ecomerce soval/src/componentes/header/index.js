@@ -24,7 +24,7 @@ export const Header = () => {
           <Link to="/">INICIO</Link> {/* Cambia href por to */}
         </li>
         <li>
-          <Link to="/productos">PRODUCTOS</Link> {/* Cambia href por to */}
+          <Link to="/productos">PRODUCTOS </Link> {/* Cambia href por to */}
         </li>
       </ul>
       <div className="cart" onClick={toogleMenu}>
