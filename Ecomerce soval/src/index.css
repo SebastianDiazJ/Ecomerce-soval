@@ -77,7 +77,7 @@ code {
 /*--------------------------HEADER CSS------------------*/
 /* Header Contenedor */
 header {
-  position: fixed;
+
   width: 97%;
   min-height: 100px;
   max-width: 1530px;
@@ -190,101 +190,127 @@ header:hover {
 }
 
 /*------------------INICIO --------------------*/
-.inicio{
+/* Contenedor principal */
+.inicio {
   width: 100%;
-  
+  max-width: 1200px;
   margin: 0 auto;
-  padding-top: 9rem;
-  color: #333333;
+  padding: 4rem 2rem;
   text-align: center;
-  padding-bottom: 1rem;
-}
-.inicio h1 {
-  font-size: 3rem;
-  font-family: 'Poppins', sans-serif; /* Fuente nueva, moderna y ligera */
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem; /* Espaciado sutil */
-  margin-bottom: 2.5rem;
-  color: #1d4e89; /* Azul oscuro elegante */
-  animation: fadeInDown 1s ease-in-out forwards;
-  opacity: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Estilo y animación para las imágenes */
-.inicio img {
+/* Encabezado */
+.header {
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: 3rem;
+  color: #1d4e89;
+  margin-bottom: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.boton {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #1d4e89;
+  border-radius: 25px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton:hover {
+  background-color: #3a78c5;
+  transform: scale(1.05);
+}
+
+/* Portada */
+.portada-img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  margin-bottom: 4rem;
+}
+
+/* Galería */
+.galeria {
+  margin-bottom: 4rem;
+}
+
+.galeria h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #1d4e89;
+}
+
+.producto-container {
+  position: relative;
   width: 100%;
   max-width: 400px;
-  border-radius: 2.5rem;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Sombra suave para destacar la imagen */
-  transform: translateY(40px);
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.producto-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
   opacity: 0;
-  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
-  animation: fadeInUp 1s ease-in-out forwards 0.3s;
+  transition: opacity 1s ease;
 }
 
-/* Hover en las imágenes */
-.inicio img:hover {
-  transform: scale(1.05); /* Ligero aumento de tamaño */
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3); /* Sombra un poco más pronunciada */
+.producto-img.active {
+  opacity: 1;
 }
 
-/* Botón interactivo */
-.inicio .boton {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 1rem 2.5rem;
-  font-size: 1.1rem;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  color: #ffffff;
-  background-color: #1d4e89; /* Botón azul oscuro */
-  border-radius: 30px;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  animation: fadeInUp 1s ease-in-out forwards 0.6s;
-  opacity: 0;
-  text-decoration: none;
+/* Google Maps */
+.mapa {
+  width: 100%;
+  height: 400px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.inicio .boton:hover {
-  background-color: #3a78c5; /* Cambio de color en hover */
-  color: #ffffff;
-}
-
-/* Animaciones keyframes */
-@keyframes fadeInDown {
-  0% {
-    transform: translateY(-40px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    transform: translateY(40px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* Ajustes de responsividad */
+/* Responsividad */
 @media (max-width: 768px) {
-  .inicio h1 {
-    font-size: 2.3rem;
+  .header h1 {
+    font-size: 2.5rem;
   }
-  .inicio img {
-    width: 90%;
+
+  .boton {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .producto-container {
+    height: 250px;
+  }
+
+  .mapa {
+    height: 300px;
   }
 }
+
 /*------------------PRODUCTOS -----------------*/
 .title {
   font-size: 2rem; /* Corregido el punto decimal */
