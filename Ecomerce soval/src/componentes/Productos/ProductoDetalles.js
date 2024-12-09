@@ -44,8 +44,8 @@ export const ProductoDetalles = () => {
                             {/* Detalles del producto */}
                             <div className="description">
                                 <h2>{detalle.title}</h2>
-                                <p className="price">${detalle.price}</p>
-                                <p><b>Descripción:</b> {detalle.description || "Vistete con bendicion "}</p>
+                                <p className="price">${detalle.priceUnit}</p>
+                                <p><b>Descripción:</b> {detalle.description || "Las blusas tipo crop top son prendas modernas y versátiles que destacan por su diseño juvenil y femenino. Su longitud, generalmente por encima de la cintura, las hace perfectas para combinar con pantalones, faldas o shorts de talle alto. Están disponibles en una variedad de estilos, desde tirantes delgados hasta mangas largas, y pueden ser confeccionadas en diferentes materiales, como algodón, poliéster o tejidos elásticos, adaptándose a distintas ocasiones y preferencias. Estas blusas ofrecen comodidad y estilo, siendo ideales para eventos casuales, salidas informales o incluso para un look más elegante dependiendo de los accesorios y la combinación elegida."}</p>
                                 {/* Botón de Añadir al carrito */}
                                 <button className="btndetalle" onClick={() => addCarrito(detalle.id)}>
                                     Añadir al carrito
