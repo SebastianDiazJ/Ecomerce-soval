@@ -243,22 +243,6 @@ const data = {
     },
     {
       id: 31,
-      title: "Soval Ref.A48",
-      priceUnit: 100000,
-      cantidad: 1,
-      image: require('./images/img036.jpg'),
-      category: "blusas",
-    },
-    {
-      id: 32,
-      title: "Soval Ref.108",
-      priceUnit: 100000,
-      cantidad: 1,
-      image: require('./images/img037.jpg'),
-      category: "blusas",
-    },
-    {
-      id: 33,
       title: "Soval Ref.06",
       priceUnit: 100000,
       cantidad: 1,
