@@ -17,10 +17,11 @@ code {
   width: 100%;
   min-height: 100vh;
   margin: 0 auto;
-  box-shadow: 0 5px 6px #086da0a4 ;
   padding: 0 15px;
   box-sizing: border-box;
+  
 }
+
 /* Footer.css */
 /* Footer general */
 .footer {
@@ -78,19 +79,19 @@ code {
 /* Header Contenedor */
 /* Header Contenedor */
 header {
-  width: 97%;
+  width: 100%;
   max-width: 1530px;
   min-height: 100px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between; /* Distribuye el espacio de manera equilibrada */
   align-items: center;
   flex-wrap: wrap;
   overflow: hidden;
   box-sizing: border-box;
-  padding: 0 1rem; /* Ajuste para que no tape los laterales */
+  padding: 0 1rem; /* Espaciado lateral */
   background-color: white;
-  box-shadow: 0 5px 10px rgba(8, 160, 92, 0.2); /* Sombra con un toque de verde */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+  box-shadow: 0 5px 10px rgba(4, 58, 195, 0.2); /* Sombra con un toque de azul */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Hover Header */
@@ -341,7 +342,7 @@ header .cart span {
   border-radius: 5px; 
 }
 .producto:hover {
-  border: 6px solid #08a05c55;
+  border: 6px solid #1a08a055;
 }
 
 .producto__img img {
@@ -426,7 +427,7 @@ header .cart span {
 }
 
 .buttom div {
-  background-color: #08a05c; /* Color de fondo verde */
+  background-color: #1208a0; /* Color de fondo verde */
   display: grid;
   align-items: center;
   text-align: center;
