@@ -23,8 +23,22 @@ export const Inicio = () => {
 
   return (
     <div className="inicio">
+      {/* Tira roja superior */}
+      <div className="tira-roja">
+        <p>Ventas al por mayor</p>
+        <p>PRECIOS al por mayor</p>
+        <p>Ventas al por mayor</p>
+        <p>PRECIOS al por mayor</p>
+        <p>Ventas al por mayor</p>
+        <p>PRECIOS al por mayor</p>
+        <p>Ventas al por mayor</p>
+        <p>PRECIOS al por mayor</p>
+        
+      </div>
+
       <header className="header">
         <h1>Bienvenidos a SOVAL</h1>
+        <h2>Dale click a alguna de nuestras opciones</h2>
         <nav className="nav-links">
           <Link to="/" className="boton">Inicio</Link>
           <Link to="/productos" className="boton">Productos</Link>
