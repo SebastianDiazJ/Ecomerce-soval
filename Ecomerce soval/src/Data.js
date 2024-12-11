@@ -187,7 +187,7 @@ const data = {
     },
     {
       id: 24,
-      title: "Soval Ref.028",
+      title: "Soval Ref.078",
       priceUnit: 100000,
       cantidad: 1,
       image: require('./images/img028.jpg'),
