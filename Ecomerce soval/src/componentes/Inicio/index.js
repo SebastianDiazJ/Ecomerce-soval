@@ -33,6 +33,14 @@ export const Inicio = () => {
         <p>PRECIOS al por mayor</p>
         <p>Ventas al por mayor</p>
         <p>PRECIOS al por mayor</p>
+        <p>Ventas al por mayor</p>
+        <p>PRECIOS al por mayor</p>
+        <p>Ventas al por mayor</p>
+        <p>PRECIOS al por mayor</p>
+        <p>Ventas al por mayor</p>
+        <p>PRECIOS al por mayor</p>
+        <p>Ventas al por mayor</p>
+        <p>PRECIOS al por mayor</p>
         
       </div>
 
@@ -50,7 +58,7 @@ export const Inicio = () => {
       </section>
 
       <section className="galeria">
-        <h2>Nuestros Productos</h2>
+        <h2>Algunos de nuestros Productos</h2>
         <div className="producto-container">
           {images.map((img, index) => (
             <img
