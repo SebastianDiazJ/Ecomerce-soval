@@ -8,6 +8,7 @@ import Producto3 from "../../images/img03.jpg";
 import Producto4 from "../../images/img04.jpg";
 import Producto5 from "../../images/img05.jpg";
 import Producto6 from "../../images/img06.jpg";
+import { Analytics } from "@vercel/analytics/react"
 
 export const Inicio = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -81,7 +82,7 @@ export const Inicio = () => {
           loading="lazy"
         ></iframe>
       </section>
-
+      <Analytics />
       <Footer />
     </div>
   );
